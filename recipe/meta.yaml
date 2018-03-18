@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win and py<35]
+  skip: true  # [win and py<36]
   features:   # [win]
     - vc14    # [win]
 

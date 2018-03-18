@@ -27,11 +27,11 @@ requirements:
     - zeromq
     - cryptopp
     - rapidjson
-    - util-linux  # [linux]
+    - libuuid  # [linux]
   run:
     - zeromq
     - cryptopp
-    - util-linux  # [linux]
+    - libuuid  # [linux]
     - vc 14    # [win and py>=35]
     
 test:

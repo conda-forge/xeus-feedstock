@@ -12,17 +12,15 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: true  # [win and py<35]
-  features:   # [win]
-    - vc14    # [win]
+  number: 1
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
-    - toolchain
     - cmake
-    - python  # [win]
-    - vc 14   # [win and py>=35]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - cppzmq
     - zeromq
     - cryptopp
@@ -32,8 +30,7 @@ requirements:
     - zeromq
     - cryptopp
     - util-linux  # [linux]
-    - vc 14    # [win and py>=35]
-    
+
 test:
   commands:
     - test -d ${PREFIX}/include/xeus  # [unix]

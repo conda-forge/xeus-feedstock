@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: true  # [win and py<35]
+  number: 1
+  skip: true  # [win and py<36]
   features:   # [win]
     - vc14    # [win]
 
@@ -27,11 +27,11 @@ requirements:
     - zeromq
     - cryptopp
     - rapidjson
-    - util-linux  # [linux]
+    - libuuid  # [linux]
   run:
     - zeromq
     - cryptopp
-    - util-linux  # [linux]
+    - libuuid  # [linux]
     - vc 14    # [win and py>=35]
     
 test:

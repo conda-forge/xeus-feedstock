@@ -29,7 +29,8 @@ requirements:
     - libuuid  # [linux]
     - cppzmq >=4.4.1,<5
     - zeromq >=4.3.1,<4.4
-    - openssl >=1.0.1,<1.2
+    - libopenssl-static >=1.0.1,<1.2  # [unix]
+    - openssl >=1.0.1,<1.2  # [win]
   # zeromq and libuuid have run_exports sections. No need to add them as run
   # requirements. xeus headers expose headers from nlohmann_json, cppzmq and
   # xtl, but does not depend on them at runtime.

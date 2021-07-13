@@ -10,8 +10,6 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jupyter-xeus/xeus/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - patches/0001-Fixed-number-version-on-other-UNIX-like-platforms.patch
 
 build:
   number: 0

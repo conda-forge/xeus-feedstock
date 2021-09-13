@@ -1,6 +1,6 @@
 {% set name = "xeus" %}
-{% set version = "1.0.4" %}
-{% set sha256 = "7324ff013eb97d579fd3b6f9770a13f8863d6046c8bbcdbe2fc7d2ac02f0161f" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "b683585c70ab8f3edcf1809430db2ffee8639252e748ec9a8649a8ea2e845741" %}
 
 package:
   name: {{ name|lower }}
@@ -25,7 +25,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - xtl >=0.7,<0.8
-    - nlohmann_json >=3.2.0,<4.0
+    - nlohmann_json >=3.2.0,<3.10
     - libuuid  # [linux]
     - cppzmq >=4.7.1,<5
     - zeromq

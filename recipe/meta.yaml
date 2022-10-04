@@ -1,6 +1,6 @@
 {% set name = "xeus" %}
-{% set version = "2.4.1" %}
-{% set sha256 = "4d567444fd0cbe9774d8e6480470728aa076c8acc9348dd3b2cd20d9142835ee" %}
+{% set version = "3.0.0" %}
+{% set sha256 = "16f9f6b24483f7134100ee78e0259131326badfaf8e443cc2f8a710a8475f2f8" %}
 
 package:
   name: {{ name|lower }}
@@ -27,16 +27,12 @@ requirements:
     - xtl >=0.7,<0.8
     - nlohmann_json >=3.2.0,<3.10
     - libuuid  # [linux]
-    - cppzmq >=4.7.1,<5
-    - zeromq
-    - openssl >=1.0.1,<1.2
   # zeromq and libuuid have run_exports sections. No need to add them as run
-  # requirements. xeus headers expose headers from nlohmann_json, cppzmq and
+  # requirements. xeus headers expose headers from nlohmann_json and
   # xtl, but does not depend on them at runtime.
   run_constrained:
     - {{ pin_compatible('xtl', max_pin='x.x') }}
     - {{ pin_compatible('nlohmann_json', max_pin='x.x') }}
-    - {{ pin_compatible('cppzmq', max_pin='x.x') }}
 
 test:
   commands:

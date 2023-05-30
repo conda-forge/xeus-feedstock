@@ -1,6 +1,5 @@
 {% set name = "xeus" %}
-{% set version = "3.0.5" %}
-{% set sha256 = "4e02ab1603e81f0f76a9a4469af05c2af7e1551b0e0a5718c4b4f6ea125ed76f" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -9,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jupyter-xeus/xeus/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: c729bfb3369c74cf1251aa0f7d7b90941c8bbf5af8b9cc83241e41dffad3fa56
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}

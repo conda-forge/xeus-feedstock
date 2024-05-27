@@ -1,5 +1,5 @@
 {% set name = "xeus" %}
-{% set version = "4.0.3" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jupyter-xeus/xeus/archive/{{ version }}.tar.gz
-  sha256: 67ca4c714f4157cd2b5ff99750b234f7c7b72b6baec0b878d8724b5ce14ba663
+  sha256: eabe5dc274ad31a972e1249b070af609e6ad1adfa4c954fb120bcdc556dd6fc4
 
 build:
   number: 0
@@ -23,14 +23,12 @@ requirements:
     - pkg-config  # [unix]
     - {{ compiler('cxx') }}
   host:
-    - xtl >=0.7,<0.8
     - nlohmann_json
     - libuuid  # [linux]
   # zeromq and libuuid have run_exports sections. No need to add them as run
-  # requirements. xeus headers expose headers from nlohmann_json and
-  # xtl, but does not depend on them at runtime.
+  # requirements. xeus headers expose headers from nlohmann_json  but does
+  # not depend on it at runtime.
   run_constrained:
-    - {{ pin_compatible('xtl', max_pin='x.x') }}
     - {{ pin_compatible('nlohmann_json', max_pin='x.x.x') }}
 
 test:

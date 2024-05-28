@@ -22,7 +22,6 @@ requirements:
     - make  # [unix]
     - pkg-config  # [unix]
     - {{ compiler('cxx') }}
-    - {{ stdlib("c") }}
   host:
     - nlohmann_json
     - libuuid  # [linux]

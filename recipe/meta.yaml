@@ -11,7 +11,7 @@ source:
   sha256: eabe5dc274ad31a972e1249b070af609e6ad1adfa4c954fb120bcdc556dd6fc4
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -22,6 +22,7 @@ requirements:
     - make  # [unix]
     - pkg-config  # [unix]
     - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
   host:
     - nlohmann_json
     - libuuid  # [linux]

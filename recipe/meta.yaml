@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jupyter-xeus/xeus/archive/{{ version }}.tar.gz
-  sha256: d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed
+  sha256: 46643f1232a009ef64dc25e7c85da32194bff0c09792f7e56e1bdde2d6f0e948
 
 build:
   number: 0

@@ -11,7 +11,7 @@ Summary: C++ implementation of the Jupyter Kernel protocol
 
 Development: https://github.com/jupyter-xeus/xeus
 
-Documentation: https://xeus.readthedocs.io
+Documentation: https://xeus.readthedocs.io/
 
 xeus is a library meant to facilitate the implementation of kernels for Jupyter. It takes the burden of implementing the Jupyter Kernel protocol so developers can focus on implementing the interpreter part of the Kernel.
 
